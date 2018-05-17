@@ -2,7 +2,11 @@ const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const ExtractPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const PurifycssWebpack = require('purifycss-webpack');
+const glob = require('glob');
 
+// 区分开发环境&&生产环境
 const isDev = process.env.NODE_ENV === 'development';
 
 const config = {
@@ -44,19 +48,25 @@ const config = {
     ]
   },
   plugins: [
-    /* 
-    说明：用于区分开发环境还是生产环境，Vue或React框架会自动根据环境输出不同的文件类型
-     */
+    // 说明：每次打包的时候清除build中的文件
+    new CleanWebpackPlugin(['./build']),
+
+    // 说明：用于区分开发环境还是生产环境，Vue或React框架会自动根据环境输出不同的文件类型
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: isDev ? '"development"' : '"production"'
       }
     }),
 
-    /* 
-    说明：用于新建html文件
-     */
-    new HTMLPlugin()
+    // 说明：用于新建html文件
+    new HTMLPlugin({
+      title: 'webpack-vue'
+    }),
+
+    // 没用的css会被消除掉，一定放在htmlwebpackPlugin后面
+    new PurifycssWebpack({
+      paths: glob.sync(path.resolve('src/*.html'))
+    })
   ]
 }
 
@@ -117,7 +127,10 @@ if (isDev) {
     new ExtractPlugin('styles.[contentHash:4].css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
-    })
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'runtime'
+    }),
   )
 }
 
