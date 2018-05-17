@@ -79,7 +79,8 @@ export default {
       }
     },
     deleteTodo(id) {
-      this.todos.splice(this.todos.findIndex(todo => todo.id === id), 1);
+      // this.todos.splice(this.todos.findIndex(todo => todo.id === id), 1);
+      this.todos = this.todos.filter(todo => todo.id !== id);
     },
     toggleFilter(state) {
       this.filter = state;
