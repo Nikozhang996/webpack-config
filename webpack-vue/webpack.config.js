@@ -3,7 +3,8 @@ const HTMLPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const ExtractPlugin = require('extract-text-webpack-plugin');
 
-const isDev = process.env.NODE_ENV === 'development'
+const isDev = process.env.NODE_ENV === 'development';
+
 const config = {
   target: 'web',
   entry: path.join(__dirname, 'src/index.js'), // 输入：项目主文件（入口文件）
@@ -31,6 +32,12 @@ const config = {
         use: [
           'style-loader',
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          },
           'stylus-loader'
         ]
       },
@@ -59,9 +66,11 @@ const config = {
         NODE_ENV: isDev ? '"development"' : '"production"'
       }
     }),
-    new HTMLPlugin({
 
-    })
+    /* 
+    说明：用于新建html文件
+     */
+    new HTMLPlugin()
   ]
 }
 
@@ -77,7 +86,7 @@ if (isDev) {
   }
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NormalModuleReplacementPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   )
 } else {
 
