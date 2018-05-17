@@ -28,20 +28,6 @@ const config = {
         ]
       },
       {
-        test: /\.styl$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true
-            }
-          },
-          'stylus-loader'
-        ]
-      },
-      {
         test: /\.jsx$/,
         loader: 'babel-loader'
       },
@@ -84,12 +70,55 @@ if (isDev) {
       errors: true
     }
   }
+  config.module.rules.push({
+    test: /\.styl$/,
+    use: [
+      'style-loader',
+      'css-loader',
+      {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: true
+        }
+      },
+      'stylus-loader'
+    ]
+  })
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   )
 } else {
+  config.entry = {
+    app: path.join(__dirname, 'src/index.js'),
+    vendor: ['vue']
+  }
 
+  config.output.filename = '[name].[chunkhash:4].js';
+
+  config.module.rules.push({
+    test: /\.styl$/,
+    use: ExtractPlugin.extract({
+      fallback: 'style-loader',
+      use: [
+        'css-loader',
+        {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: true
+          }
+        },
+        'stylus-loader'
+      ]
+    })
+  });
+
+  config.plugins.push(
+    new ExtractPlugin('styles.[contentHash:4].css'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+    })
+  )
 }
 
 module.exports = config;
