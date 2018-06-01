@@ -1,14 +1,16 @@
-let path = require('path');
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-let CleanWebpackPlugin = require('clean-webpack-plugin');
-let webpack = require('webpack');
-let ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
-let cssExtract = new ExtractTextWebpackPlugin({
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const cssExtract = new ExtractTextWebpackPlugin({
   filename: 'css/css.css',
 });
-let CopyWebpackPlugin = require('copy-webpack-plugin');
-let PurifycssWebpack = require('purifycss-webpack');
-let glob = require('glob');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const PurifycssWebpack = require('purifycss-webpack');
+const glob = require('glob');
+
+
 module.exports = {
   entry: './src/index.js',
   output: {
