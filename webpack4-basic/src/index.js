@@ -1,6 +1,3 @@
-import './common/basc.styl'
-// import './common/index.css'
+import './common/basc.styl';
 
-const name = 'bio卡洛斯'
 
-console.log(name);

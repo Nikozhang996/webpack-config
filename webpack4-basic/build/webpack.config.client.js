@@ -14,7 +14,12 @@ const defaultPluins = [
       NODE_ENV: isDev ? '"development"' : '"production"'
     }
   }),
-  new HTMLPlugin()
+  new HTMLPlugin({
+    title: 'webpack-basic',
+    filename: 'index.html',
+    template: './src/index.html',
+    inject: true
+  })
 ]
 
 const devServer = {
@@ -39,10 +44,7 @@ if (isDev) {
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: true,
-              config: {
-                path: 'postcss.config.js'
-              }
+              sourceMap: true
             }
           },
           'stylus-loader'
@@ -74,10 +76,7 @@ if (isDev) {
             {
               loader: 'postcss-loader',
               options: {
-                sourceMap: true,
-                config: {
-                  path: 'postcss.config.js'
-                }
+                sourceMap: true
               }
             },
             'stylus-loader'
