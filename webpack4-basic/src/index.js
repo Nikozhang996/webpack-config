@@ -1,3 +1,0 @@
-import './common/basc.styl';
-
-
