@@ -4,7 +4,9 @@
   "description": "* HtmlWebpackPlugin\r * WebpackMerge\r * HardSourcePlugin",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:build": "webpack --env.development --config ./build/webpack.base.js",
+    "dev": "webpack-dev-server --env.development --config ./build/webpack.base.js",
+    "build": "webpack --env.production --config ./build/webpack.base.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,9 @@
   },
   "homepage": "https://github.com/Nikozhang996/webpack-config#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^4.0.4",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
   }
 }
