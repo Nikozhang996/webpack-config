@@ -21,8 +21,11 @@
 
 ## 注意坑点
 
+* loader顺序，是从右到左
+* css文件中引scss，需要设置css-loader参数options
 * compiler
-* optimization
+* optimization优化项
+* 默认生产模式会压缩js文件，但配置optimization使用css相关压缩插件后，JS也需引入对应插件
 
 ## 参考资料 
 
