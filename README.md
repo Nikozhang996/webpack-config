@@ -23,7 +23,7 @@
 
 ## 细节知识
 
-* `webpack output is served from /`，默认webpack-dev-server执行后会在项目根目录下建立文件。
+* `webpack output is served from /` ，默认webpack-dev-server执行后会在项目根目录下建立文件。
 * 需要同时安装webpack, webpack-cli， `npm i webpack webpack-cli -D` 与 `npm i webpack webpack-cli -g` 
 * webpack配置文件默认叫 `webpack.config.js或webpack.file.js` ，但常用前者。
 * 依赖前面带@符表示为作用域，比如 `@babel` 
@@ -40,7 +40,8 @@
 
 ## 问题收集
 
-* (Error: EINVAL: invalid argument, read) [https://stackoverflow.com/questions/47087759/getting-error-einval-invalid-argument-read-for-npm-install-save-dev-esli]
+* [Error: EINVAL: invalid argument, read](https://stackoverflow.com/questions/47087759/getting-error-einval-invalid-argument-read-for-npm-install-save-dev-esli)
+* [core-js版本号问题](https://stackoverflow.com/questions/55308769/module-not-found-error-cant-resolve-core-js-es6)
 
 ## 参考资料 
 

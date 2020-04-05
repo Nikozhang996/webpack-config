@@ -1,0 +1,13 @@
+{
+    "presets": [
+        ["@babel/preset-env", {
+            // 使用的api 会自动转化，并且是按需加载
+            "useBuiltIns": "usage",
+            // babel-polyfill
+            "corejs": 3
+        }]
+    ],
+    "plugins": [
+
+    ]
+}
