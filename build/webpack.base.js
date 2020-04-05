@@ -36,7 +36,16 @@ module.exports = function (env) {
         {
           // 匹配到scss结尾的使用sass-loader 来调用node-sass处理sass文件
           test: /\.scss$/,
-          use: ["style-loader", "css-loader", "sass-loader"]
+          use: [
+            "style-loader",
+            "css-loader",
+            {
+              loader: "sass-loader",
+              options: {
+                implementation: require("sass")
+              }
+            }
+          ]
         },
       ]
     },

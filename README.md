@@ -36,10 +36,11 @@
 * optimization优化项
 * 默认生产模式会压缩js文件，但配置optimization使用css相关压缩插件后，JS也需引入对应插件
 * babel包与typescript
+* webpack.config配置报错不会指出具体项，只能提供基本提示。
 
 ## 问题收集
 
-* (Error: EINVAL: invalid argument, read)[https://stackoverflow.com/questions/47087759/getting-error-einval-invalid-argument-read-for-npm-install-save-dev-esli]
+* (Error: EINVAL: invalid argument, read) [https://stackoverflow.com/questions/47087759/getting-error-einval-invalid-argument-read-for-npm-install-save-dev-esli]
 
 ## 参考资料 
 
