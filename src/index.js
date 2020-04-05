@@ -1,4 +1,6 @@
-/* import './style/scss.scss'
+/*
+
+import './style/scss.scss'
 
 import image from './images/img.png'
 
@@ -7,7 +9,8 @@ const img = new Image();
 img.src = image
 const div = document.getElementById('key')
 
-document.body.appendChild(img); */
+document.body.appendChild(img);
+
 
 function timer(value) {
     return new Promise(function (resolve, reject) {
@@ -22,4 +25,16 @@ async function func() {
     console.log(reuslt);
 }
 
-func()
+func() 
+*/
+
+
+// @func
+class Cat {
+    a = 'a'
+}
+
+
+const car = new Cat
+
+console.log(car);
