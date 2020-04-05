@@ -13,7 +13,6 @@ module.exports = function (env) {
   const isProduction = env.production;
 
   const BASE_CONFIG = {
-    mode: 'development',
     entry: path.resolve(__dirname, '../src/index.js'),
     output: {
       filename: 'bundle.js',
@@ -21,19 +20,25 @@ module.exports = function (env) {
     },
     module: {
       rules: [{
-        test: /\.css$/,
-        use: [
-          isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2
-            }
-          },
-          'postcss-loader',
-          'sass-loader'
-        ]
-      }]
+          test: /\.css$/,
+          use: [
+            isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 2
+              }
+            },
+            'postcss-loader',
+            'sass-loader'
+          ]
+        },
+        {
+          // 匹配到scss结尾的使用sass-loader 来调用node-sass处理sass文件
+          test: /\.scss$/,
+          use: ["style-loader", "css-loader", "sass-loader"]
+        },
+      ]
     },
     plugins: [
       new HtmlWebpackPlugin({
