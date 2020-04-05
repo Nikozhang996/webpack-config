@@ -1,6 +1,11 @@
 $color: #fff;
 $background-color:#666;
 
+.root {
+    width: 100px;
+    transition: width 2s;
+}
+
 body {
     color: $color;
     background-color: $background-color;

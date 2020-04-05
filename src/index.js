@@ -1,6 +1,7 @@
+import './style/scss.scss'
+
 /*
 
-import './style/scss.scss'
 
 import image from './images/img.png'
 
@@ -30,11 +31,3 @@ func()
 
 
 // @func
-class Cat {
-    a = 'a'
-}
-
-
-const car = new Cat
-
-console.log(car);

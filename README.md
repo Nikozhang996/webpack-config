@@ -13,6 +13,10 @@
 * WebpackMerge
 * HardSourcePlugin
 * babel
+* postcss-loader
+  + https://github.com/postcss/postcss-loader
+  + https://github.com/michael-ciniawsky/postcss-load-config
+  + https://www.npmjs.com/package/browserslist
 
 ## 学习笔记
 
@@ -37,6 +41,7 @@
 * 默认生产模式会压缩js文件，但配置optimization使用css相关压缩插件后，JS也需引入对应插件
 * babel包与typescript
 * webpack.config配置报错不会指出具体项，只能提供基本提示。
+* `.browserslist`文件babel与postcss通用
 
 ## 问题收集
 
@@ -45,5 +50,7 @@
 
 ## 参考资料 
 
+* https://www.jianshu.com/p/42e11515c10f
+* https://github.com/ianva/dart-sass-loader
 * https://gitee.com/zhufengpeixun/projects
 
