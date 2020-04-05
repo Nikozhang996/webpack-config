@@ -20,6 +20,10 @@ module.exports = function (env) {
     },
     module: {
       rules: [{
+          test: /\.js$/,
+          use: 'babel-loader'
+        },
+        {
           test: /\.css$/,
           use: [
             isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -34,7 +38,7 @@ module.exports = function (env) {
           ]
         },
         {
-          // 匹配到scss结尾的使用sass-loader 来调用node-sass处理sass文件
+          // 匹配到scss结尾的使用sass-loader，指定dart-sass来处理
           test: /\.scss$/,
           use: [
             "style-loader",
@@ -47,6 +51,20 @@ module.exports = function (env) {
             }
           ]
         },
+        { // 图标的转化
+          test: /\.(woff|ttf|eot)$/,
+          use: 'file-loader'
+        },
+        {
+          test: /\.(jpe?g|png|gif|svg)$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              name: "image/[contentHash].[ext]",
+              limit: 1024
+            }
+          }
+        }
       ]
     },
     plugins: [
