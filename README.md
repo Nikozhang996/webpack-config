@@ -1,23 +1,31 @@
-## webpack是什么？
+## webpack是什么
 
-## webpack能做什么？
+> webpack的官方定义是个模块打包机
+
+## webpack能做什么
+
+* 编译和压缩文件
+* 使用不同的loader处理对应的文件
 
 ## 常见loader和plugin
 
 * HtmlWebpackPlugin
 * WebpackMerge
 * HardSourcePlugin
+* babel
 
 ## 学习笔记
 
 * webpack默认以生产模式，src/index.js作为入口，编译至dist/main.js
 * 默认mode为开发 `development` 模式和生产 `production` 模式。
 * 通常webpack需要自定义配置，在项目根目录下建 `webpakc.config.js` ，webpack会自动识别和读取。
+* module可以接收 `String,Array,Object` 三种类型写法
 
 ## 细节知识
 
 * 需要同时安装webpack, webpack-cli， `npm i webpack webpack-cli -D` 与 `npm i webpack webpack-cli -g` 
 * webpack配置文件默认叫 `webpack.config.js或webpack.file.js` ，但常用前者。
+* 依赖前面带@符表示为作用域，比如 `@babel` 
 
 ## 注意坑点
 
@@ -26,6 +34,7 @@
 * compiler
 * optimization优化项
 * 默认生产模式会压缩js文件，但配置optimization使用css相关压缩插件后，JS也需引入对应插件
+* babel包与typescript
 
 ## 参考资料 
 
