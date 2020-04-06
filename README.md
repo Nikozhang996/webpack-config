@@ -30,6 +30,11 @@
 
 - DLLPlugin 动态链接库
 - 生产环境分享静态库
+- hot module replacement
+  - https://www.jianshu.com/p/45c150c4aece
+  - https://www.webpackjs.com/configuration/dev-server/
+  - https://www.webpackjs.com/api/hot-module-replacement/#status
+  - https://www.webpackjs.com/guides/hot-module-replacement/#%E5%90%AF%E7%94%A8-hmr
 
 ## 细节知识
 
