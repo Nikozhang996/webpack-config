@@ -12,7 +12,7 @@ module.exports = function(env) {
   const isProduction = env.production;
 
   const BASE_CONFIG = {
-    entry: path.resolve(__dirname, "../src/index.js"),
+    entry: path.resolve(__dirname, "../src/index.ts"),
     output: {
       filename: "bundle.js",
       path: path.resolve(__dirname, "../dist"),
@@ -22,15 +22,18 @@ module.exports = function(env) {
         {
           test: /\.vue$/,
           use: "vue-loader",
+          exclude: /node_modules/,
         },
         {
           // 解析js文件 默认会调用@babel/core
           test: /\.tsx?$/,
           use: "babel-loader",
+          exclude: /node_modules/,
         },
         {
           test: /\.js$/,
           use: "babel-loader",
+          exclude: /node_modules/,
         },
         {
           test: /\.css$/,
@@ -93,6 +96,7 @@ module.exports = function(env) {
       new VueLoaderPlugin(),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "../public/index.html"),
+        title: "hello webpack",
         filename: "index.html",
         minify: isProduction && {
           removeAttributeQuotes: true,

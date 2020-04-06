@@ -9,15 +9,27 @@
 
 ## 常见 loader 和 plugin
 
+- copy-webpack-plugin，拷贝静态文件
 - HtmlWebpackPlugin
+  - https://github.com/jantimon/html-webpack-plugin
 - WebpackMerge
+  > 合并webpack配置
 - HardSourcePlugin
 - babel
+  - "@babel/runtime"
+  - "@babel/preset-typescript"
+  - "@babel/preset-react"
+  - "@babel/preset-env"
+  - "@babel/plugin-transform-runtime"
+  - "@babel/plugin-proposal-decorators"
+  - @babel/plugin-proposal-class-properties
+  - @babel/core
 - postcss-loader
   - https://segmentfault.com/a/1190000014782560
   - https://github.com/postcss/postcss-loader
   - https://github.com/michael-ciniawsky/postcss-load-config
   - https://www.npmjs.com/package/browserslist
+  - https://github.com/ianva/dart-sass-loader
 
 ## 学习笔记
 
@@ -58,9 +70,9 @@
 
 - [Error: EINVAL: invalid argument, read](https://stackoverflow.com/questions/47087759/getting-error-einval-invalid-argument-read-for-npm-install-save-dev-esli)
 - [core-js 版本号问题](https://stackoverflow.com/questions/55308769/module-not-found-error-cant-resolve-core-js-es6)
+- preset-typescript 与 ts-loader 之间是何关系？
 
 ## 参考资料
 
 - https://www.jianshu.com/p/42e11515c10f
-- https://github.com/ianva/dart-sass-loader
-- https://gitee.com/zhufengpeixun/projects
+- https://gitee.com/zhufengpeixun/webpack-train

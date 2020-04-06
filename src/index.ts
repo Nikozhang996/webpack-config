@@ -1,10 +1,15 @@
 import Vue from "vue";
 import App from "./App.vue";
+
 const vm = new Vue({
   el: "#root",
-  render: (h) => h(App),
+  render: (h: any) => h(App),
 });
 
+if (module.hot) {
+  // 如果支持热更新
+  module.hot.accept(); // 当入口文件变化后重新执行当前入口文件
+}
 /*
 import './style/scss.scss'
 
