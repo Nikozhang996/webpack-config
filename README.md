@@ -13,7 +13,7 @@
 - HtmlWebpackPlugin
   - https://github.com/jantimon/html-webpack-plugin
 - WebpackMerge
-  > 合并webpack配置
+  > 合并 webpack 配置
 - HardSourcePlugin
 - babel
   - "@babel/runtime"
@@ -47,6 +47,9 @@
   - https://www.webpackjs.com/configuration/dev-server/
   - https://www.webpackjs.com/api/hot-module-replacement/#status
   - https://www.webpackjs.com/guides/hot-module-replacement/#%E5%90%AF%E7%94%A8-hmr
+- 利用 happypack 调用多进程打包
+
+  - https://www.jianshu.com/p/b9bf995f3712
 
 ## 细节知识
 
@@ -71,6 +74,7 @@
 - [Error: EINVAL: invalid argument, read](https://stackoverflow.com/questions/47087759/getting-error-einval-invalid-argument-read-for-npm-install-save-dev-esli)
 - [core-js 版本号问题](https://stackoverflow.com/questions/55308769/module-not-found-error-cant-resolve-core-js-es6)
 - preset-typescript 与 ts-loader 之间是何关系？
+- [webpack-typescript-module-hot-does-not-exist](https://stackoverflow.com/questions/40568176/webpack-typescript-module-hot-does-not-exist)
 
 ## 参考资料
 

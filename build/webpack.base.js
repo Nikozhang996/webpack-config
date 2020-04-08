@@ -6,6 +6,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const HappyPack = require("happypack");
+const os = require("os");
+const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
 
 module.exports = function(env) {
   const isDevelopment = env.development;
@@ -17,6 +20,9 @@ module.exports = function(env) {
       filename: "bundle.js",
       path: path.resolve(__dirname, "../dist"),
     },
+    resolve: {
+      extensions: [".js", ".json", "ts"],
+    },
     module: {
       rules: [
         {
@@ -27,12 +33,13 @@ module.exports = function(env) {
         {
           // 解析js文件 默认会调用@babel/core
           test: /\.tsx?$/,
-          use: "babel-loader",
+          use: "happypack/loader?id=handleBabelPack",
           exclude: /node_modules/,
         },
         {
           test: /\.js$/,
-          use: "babel-loader",
+          use: "happypack/loader?id=handleBabelPack",
+          //把对.js 的文件处理交给id为happyBabel 的HappyPack 的实例执行
           exclude: /node_modules/,
         },
         {
@@ -102,6 +109,14 @@ module.exports = function(env) {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
         },
+      }),
+      new HappyPack({
+        id: "handleBabelPack",
+        //共享进程池
+        threadPool: happyThreadPool,
+        //允许 HappyPack 输出日志
+        verbose: true,
+        loaders: ["babel-loader"],
       }),
     ].filter(Boolean),
   };
