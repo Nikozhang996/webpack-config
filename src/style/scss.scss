@@ -1,12 +1,26 @@
+.c1 {
+  font-size: 26px;
+}
+
+.c2 {
+  font-size: 26px;
+}
+.c3 {
+  font-size: 26px;
+}
+.c4 {
+  font-size: 26px;
+}
+
 $color: #fff;
-$background-color:#666;
+$background-color: #666;
 
 .root {
-    width: 100px;
-    transition: width 2s;
+  width: 100px;
+  transition: width 2s;
 }
 
 body {
-    color: $color;
-    background-color: $background-color;
+  color: $color;
+  background-color: $background-color;
 }

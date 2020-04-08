@@ -123,5 +123,5 @@ module.exports = function(env) {
 
   return isDevelopment
     ? merge(BASE_CONFIG, DEVELOPMENT_CONFIG)
-    : merge(BASE_CONFIG, PROD_CONFIG);
+    : merge(BASE_CONFIG, PROD_CONFIG(env));
 };

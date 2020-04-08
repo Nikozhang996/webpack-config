@@ -51,6 +51,9 @@
 
   - https://www.jianshu.com/p/b9bf995f3712
 
+- 使用 purgecss-webpack-plugin 去除未引用的 CSS 样式
+  - purgecss-webpack-plugin
+
 ## 细节知识
 
 - `webpack output is served from /` ，默认 webpack-dev-server 执行后会在项目根目录下建立文件。

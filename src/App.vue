@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ a }}</h1>
+    <h1 class="c1">{{ a }}</h1>
     <!-- <h2>{{ a }}</h2>
     <h3>{{ a }}</h3>
     <h4>{{ a }}</h4>
@@ -11,7 +11,6 @@
   </div>
 </template>
 <script>
-
 export default {
   data() {
     return {
@@ -28,4 +27,17 @@ export default {
   },
 };
 </script>
-<style lang="scss" scope></style>
+<style lang="scss" scope>
+.c1 {
+  font-size: 22px;
+}
+.c2 {
+  font-size: 23px;
+}
+.c3 {
+  font-size: 24px;
+}
+.c4 {
+  font-size: 25px;
+}
+</style>

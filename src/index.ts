@@ -1,13 +1,10 @@
-// import Vue from "vue";
-// import App from "./App.vue";
+import Vue from "vue";
+import App from "./App.vue";
 
-/* const vm = new Vue({
+const vm = new Vue({
   el: "#root",
   render: (h: any) => h(App),
-}); */
-import add from "./utils";
-
-console.log(add(2, 10));
+});
 
 if (module.hot) {
   // 如果支持热更新
