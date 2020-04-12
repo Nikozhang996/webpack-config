@@ -37,7 +37,8 @@
 - 默认 mode 为开发 `development` 模式和生产 `production` 模式。
 - 通常 webpack 需要自定义配置，在项目根目录下建 `webpakc.config.js` ，webpack 会自动识别和读取。
 - module 可以接收 `String,Array,Object` 三种类型写法
-
+- 构建React+TypeScript
+  - https://www.tslang.cn/docs/handbook/react-&-webpack.html
 ## 优惠策略
 
 - DLLPlugin 动态链接库
