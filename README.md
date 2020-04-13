@@ -38,7 +38,45 @@
 - 通常 webpack 需要自定义配置，在项目根目录下建 `webpakc.config.js` ，webpack 会自动识别和读取。
 - module 可以接收 `String,Array,Object` 三种类型写法
 
-## 优惠策略
+## 优化策略
+
+https://segmentfault.com/a/1190000021952886
+
+### 删除无用 CSS 样式
+
+> purgecss-webpack-plugin
+
+### 引用图片压缩
+
+> image-webpack-loader
+
+### CDN 加载文件
+
+> add-asset-html-cdn-webpack-plugin
+
+### Tree-shaking && Scope-Hoisting
+
+### DllPlugin
+
+### DllReferencePlugin
+
+### 动态加载
+
+### SplitChunks
+
+### 打包文件分析工具
+
+> webpack-bundle-analyzer
+
+### IgnorePlugin
+
+### 费时分析
+
+> speed-measure-webpack-plugin
+
+### noParse
+
+### include/exclude
 
 - DLLPlugin 动态链接库
 - 生产环境分享静态库
@@ -78,6 +116,7 @@
 - [core-js 版本号问题](https://stackoverflow.com/questions/55308769/module-not-found-error-cant-resolve-core-js-es6)
 - preset-typescript 与 ts-loader 之间是何关系？
 - [webpack-typescript-module-hot-does-not-exist](https://stackoverflow.com/questions/40568176/webpack-typescript-module-hot-does-not-exist)
+- Vue 项目中引入 purgecss-webpack-plugin 无效
 
 ## 参考资料
 
