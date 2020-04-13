@@ -1,15 +1,22 @@
-import Vue from "vue";
+/* import Vue from "vue";
 import App from "./App.vue";
 
-const vm = new Vue({
+export default new Vue({
   el: "#root",
   render: (h: any) => h(App),
-});
+}); */
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+
+// import App from "./ReactApp/index.tsx";
+// ReactDOM.render(<App></App>, document.getElementById("root"));
+const div = document.getElementById（'#root')
+div.innerHTML = 'adf'
 
 if (module.hot) {
-  // 如果支持热更新
   module.hot.accept(); // 当入口文件变化后重新执行当前入口文件
 }
+
 /*
 import './style/scss.scss'
 
