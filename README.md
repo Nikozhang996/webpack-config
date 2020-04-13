@@ -120,5 +120,6 @@ https://segmentfault.com/a/1190000021952886
 
 ## 参考资料
 
+- https://segmentfault.com/a/1190000020450206?utm_source=tag-newest
 - https://www.jianshu.com/p/42e11515c10f
 - https://gitee.com/zhufengpeixun/webpack-train
