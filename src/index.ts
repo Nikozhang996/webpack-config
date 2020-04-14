@@ -1,4 +1,4 @@
-import './style/scss.scss'
+import "./style/scss.scss";
 /* import Vue from "vue";
 import App from "./App.vue";
 
@@ -6,15 +6,16 @@ export default new Vue({
   el: "#root",
   render: (h: any) => h(App),
 }); */
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+// import * as React from "react";
+// import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 
-// import App from "./ReactApp/index.tsx";
-// ReactDOM.render(<App></App>, document.getElementById("root"));
-const div = document.getElementById("root");
-div.className = "c1";
-div.innerHTML = "Hello";
-
+import App from "./ReactApp/index.tsx";
+ReactDOM.render(React.createElement(App), root);
+// const div = document.getElementById("root");
+// div.className = "c1";
+// div.innerHTML = "Hello";
 
 /*
 

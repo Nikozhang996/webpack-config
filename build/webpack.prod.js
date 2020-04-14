@@ -9,17 +9,34 @@ module.exports = function(env) {
   return {
     mode: "production",
     optimization: {
-      minimizer: [new OptimizeCSSAssetsPlugin(), new TerserWebpackPlugin()],
+      minimizer: [new OptimizeCSSAssetsPlugin(), new TerserWebpackPlugin()]
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: "style/[name].css",
+        filename: "style/[name].css"
       }),
       new PurgecssPlugin({
         paths: glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
-          nodir: true,
-        }),
-      }),
+          nodir: true
+        })
+      })
     ],
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: "styles",
+            test: /\.css$/,
+            chunks: "all",
+            enforce: true
+          }
+        }
+      }
+    }
   };
 };
+
+// const list = glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
+//   nodir: true
+// });
+// console.log(list);
