@@ -11,8 +11,8 @@ export default new Vue({
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./ReactApp/index.tsx";
-ReactDOM.render(React.createElement(App), root);
+import App from "./ReactApp/index";
+ReactDOM.render(Reac.createElement(App), root);
 // const div = document.getElementById("root");
 // div.className = "c1";
 // div.innerHTML = "Hello";
