@@ -1,4 +1,7 @@
 import "./style/scss.scss";
+
+
+
 /* import Vue from "vue";
 import App from "./App.vue";
 
@@ -6,13 +9,13 @@ export default new Vue({
   el: "#root",
   render: (h: any) => h(App),
 }); */
-// import * as React from "react";
-// import * as ReactDOM from "react-dom";
-import React from "react";
+/* import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./ReactApp/index";
 ReactDOM.render(Reac.createElement(App), root);
+ */
+
 // const div = document.getElementById("root");
 // div.className = "c1";
 // div.innerHTML = "Hello";
