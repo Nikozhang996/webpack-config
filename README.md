@@ -122,7 +122,7 @@ https://segmentfault.com/a/1190000021952886
 
 ## 参考资料
 
-- https://segmentfault.com/a/1190000020450206?utm_source=tag-newest
+- (从 0 搭建自己的 webpack 开发环境（一）)[https://segmentfault.com/a/1190000020450206?utm_source=tag-newest]
 - https://www.jianshu.com/p/42e11515c10f
 - https://gitee.com/zhufengpeixun/webpack-train
 - (使用@babel/preset-typescript 取代 awesome-typescript-loader 和 ts-loader)[https://www.cnblogs.com/vvjiang/archive/2019/12/18/12057811.html]
