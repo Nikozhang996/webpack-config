@@ -9,6 +9,7 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const HappyPack = require("happypack");
 const os = require("os");
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
+const AddAssetHtmlCdnPlugin = require("add-asset-html-cdn-webpack-plugin");
 
 module.exports = function(env) {
   const isDevelopment = env.development;
@@ -138,6 +139,9 @@ module.exports = function(env) {
           collapseWhitespace: true,
         },
       }),
+      // new AddAssetHtmlCdnPlugin(true, {
+      //   jquery: "https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js",
+      // }),
       new HappyPack({
         id: "handleBabelPack",
         //共享进程池
@@ -147,6 +151,9 @@ module.exports = function(env) {
         loaders: ["babel-loader"],
       }),
     ].filter(Boolean),
+    externals: {
+      jquery: "https://cdn.bootcss.com/jquery/3.4.1/jquery.js",
+    },
   };
 
   return isDevelopment

@@ -1,5 +1,10 @@
 import "./style/scss.scss";
 
+import $ from "jquery";
+console.log("$", $);
+
+
+
 /* import Vue from "vue";
 import App from "./App.vue";
 

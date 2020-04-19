@@ -48,7 +48,9 @@ https://segmentfault.com/a/1190000021952886
 
 ### 引用图片压缩
 
-> image-webpack-loader
+> 使用`image-webpack-loader`插件压缩图片大小
+
+- https://www.npmjs.com/package/image-webpack-loader
 
 ### CDN 加载文件
 
@@ -124,3 +126,5 @@ https://segmentfault.com/a/1190000021952886
 - https://www.jianshu.com/p/42e11515c10f
 - https://gitee.com/zhufengpeixun/webpack-train
 - (使用@babel/preset-typescript 取代 awesome-typescript-loader 和 ts-loader)[https://www.cnblogs.com/vvjiang/archive/2019/12/18/12057811.html]
+- (【webpack 学习随笔】2.webpack 优化配置策略)[https://www.shifeng1993.com/2019/06/09/webpack_2/]
+- (Webpack 学习笔记)[https://www.jianshu.com/p/d550930afbec]
