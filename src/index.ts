@@ -1,6 +1,11 @@
 import "./style/scss.scss";
 
+import img from "./images/2017-06-14.png";
 
+const obj = new Image();
+obj.src = img;
+obj.width = 600;
+document.body.appendChild(obj);
 
 /* import Vue from "vue";
 import App from "./App.vue";

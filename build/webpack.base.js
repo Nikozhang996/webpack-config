@@ -44,6 +44,7 @@ module.exports = function(env) {
         },
         {
           test: /\.css$/,
+          exclude: /node_modules/,
           use: [
             isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
             {
@@ -64,6 +65,7 @@ module.exports = function(env) {
         {
           // 匹配到scss结尾的使用sass-loader，指定dart-sass来处理
           test: /\.scss$/,
+          exclude: /node_modules/,
           use: [
             isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
             {
@@ -87,14 +89,40 @@ module.exports = function(env) {
           use: "file-loader",
         },
         {
-          test: /\.(jpe?g|png|gif|svg)$/,
-          use: {
-            loader: "url-loader",
-            options: {
-              name: "image/[contentHash].[ext]",
-              limit: 1024,
+          test: /\.(gif|png|jpe?g|svg)$/i,
+          use: [
+            {
+              loader: "url-loader",
+              options: {
+                name: "image/[contentHash].[ext]",
+                limit: 1024,
+              },
             },
-          },
+            {
+              loader: "image-webpack-loader",
+              options: {
+                mozjpeg: {
+                  progressive: true,
+                  quality: 80,
+                },
+                // optipng.enabled: false will disable optipng
+                optipng: {
+                  enabled: false,
+                },
+                pngquant: {
+                  quality: [0.65, 0.9],
+                  speed: 4,
+                },
+                gifsicle: {
+                  interlaced: false,
+                },
+                // the webp option will enable WEBP
+                webp: {
+                  quality: 80,
+                },
+              },
+            },
+          ],
         },
       ],
     },
