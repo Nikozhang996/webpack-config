@@ -56,7 +56,18 @@ https://segmentfault.com/a/1190000021952886
 
 > add-asset-html-cdn-webpack-plugin
 
+#### 参考资料
+
+- https://segmentfault.com/a/1190000015709430
+- https://www.jianshu.com/p/9248db0349fb
+
 ### Tree-shaking && Scope-Hoisting
+
+> webpack4 中已自带`Tree-shaking`，在生产模式中将自动开启
+
+#### 参考资料
+
+- https://zhuanlan.zhihu.com/p/41997654
 
 ### DllPlugin
 
