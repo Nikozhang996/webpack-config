@@ -3,6 +3,7 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
+  devtool: "cheap-module-eval-source-map",
   devServer: {
     port: 4000,
     compress: true,
