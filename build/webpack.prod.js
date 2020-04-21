@@ -10,9 +10,6 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 module.exports = function(env) {
   return {
     mode: "production",
-    optimization: {
-      minimizer: [new OptimizeCSSAssetsPlugin(), new TerserWebpackPlugin()],
-    },
     plugins: [
       new MiniCssExtractPlugin({
         filename: "style/[name].css",
@@ -22,9 +19,11 @@ module.exports = function(env) {
           nodir: true,
         }),
       }),
-      new BundleAnalyzerPlugin(),
+      // new BundleAnalyzerPlugin(),
     ],
     optimization: {
+      usedExports: true, // 提示使用哪个模块
+      minimizer: [new OptimizeCSSAssetsPlugin(), new TerserWebpackPlugin()],
       splitChunks: {
         cacheGroups: {
           styles: {

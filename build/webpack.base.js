@@ -24,6 +24,9 @@ module.exports = function(env) {
     resolve: {
       extensions: [".js", ".json", "ts"],
     },
+    externals: {
+      jquery: "$",
+    },
     module: {
       rules: [
         {
@@ -139,9 +142,6 @@ module.exports = function(env) {
           collapseWhitespace: true,
         },
       }),
-      // new AddAssetHtmlCdnPlugin(true, {
-      //   jquery: "https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js",
-      // }),
       new HappyPack({
         id: "handleBabelPack",
         //共享进程池
@@ -151,9 +151,6 @@ module.exports = function(env) {
         loaders: ["babel-loader"],
       }),
     ].filter(Boolean),
-    externals: {
-      jquery: "https://cdn.bootcss.com/jquery/3.4.1/jquery.js",
-    },
   };
 
   return isDevelopment
