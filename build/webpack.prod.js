@@ -38,8 +38,3 @@ module.exports = function(env) {
     },
   };
 };
-
-// const list = glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
-//   nodir: true
-// });
-// console.log(list);
