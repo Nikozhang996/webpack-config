@@ -63,7 +63,7 @@ https://segmentfault.com/a/1190000021952886
 
 ### Tree-shaking && Scope-Hoisting
 
-> webpack4 中已自带`Tree-shaking`，在生产模式中将自动开启
+> webpack4 中已自带`Tree-shaking`，在生产模式中将自动开启，要注意副作用的影响，可以手动指定在package.json中`sideEffects`。同时 CSS 样式要使用 require()语法，或者在 sideEffects 中指定文件。
 
 #### 参考资料
 
@@ -139,4 +139,4 @@ https://segmentfault.com/a/1190000021952886
 - [使用@babel/preset-typescript 取代 awesome-typescript-loader 和 ts-loader](https://www.cnblogs.com/vvjiang/archive/2019/12/18/12057811.html)
 - [【webpack 学习随笔】2.webpack 优化配置策略](https://www.shifeng1993.com/2019/06/09/webpack_2/)
 - [Webpack 学习笔记](https://www.jianshu.com/p/d550930afbec)
-- [「吐血整理」再来一打Webpack面试题](https://mp.weixin.qq.com/s/UdsP3u_LR64dzffNPCx-2g)
+- [「吐血整理」再来一打 Webpack 面试题](https://mp.weixin.qq.com/s/UdsP3u_LR64dzffNPCx-2g)
