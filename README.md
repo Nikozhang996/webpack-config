@@ -63,13 +63,15 @@ https://segmentfault.com/a/1190000021952886
 
 ### Tree-shaking && Scope-Hoisting
 
-> webpack4 中已自带`Tree-shaking`，在生产模式中将自动开启，要注意副作用的影响，可以手动指定在package.json中`sideEffects`。同时 CSS 样式要使用 require()语法，或者在 sideEffects 中指定文件。
+> webpack4 中已自带`Tree-shaking`，在生产模式中将自动开启，要注意副作用的影响，可以手动指定在 package.json 中`sideEffects`。同时 CSS 样式要使用 require()语法，或者在 sideEffects 中指定文件。
 
 #### 参考资料
 
 - https://zhuanlan.zhihu.com/p/41997654
 
 ### DllPlugin
+
+> 在开发环境中，相当于把公共部门抽离出来避免重复打包，通用`manifest.json`代理的形式，先查找缓存。
 
 ### DllReferencePlugin
 

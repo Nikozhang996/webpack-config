@@ -6,7 +6,8 @@
   "scripts": {
     "dev:build": "webpack --env.development --config ./build/webpack.base.js",
     "dev": "webpack-dev-server --env.development --config ./build/webpack.base.js",
-    "build": "webpack --env.production --config ./build/webpack.base.js"
+    "build": "webpack --env.production --config ./build/webpack.base.js",
+    "dll": "webpack --config webpack.dll.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "@types/react-dom": "^16.9.6",
     "@types/webpack-env": "^1.15.1",
     "add-asset-html-cdn-webpack-plugin": "^1.0.0",
+    "add-asset-html-webpack-plugin": "^3.1.3",
     "autoprefixer": "^9.7.5",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
