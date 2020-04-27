@@ -9,7 +9,7 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const HappyPack = require("happypack");
 const os = require("os");
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
-const AddAssetHtmlCdnPlugin = require("add-asset-html-cdn-webpack-plugin");
+// const AddAssetHtmlCdnPlugin = require("add-asset-html-cdn-webpack-plugin");
 
 module.exports = function(env) {
   const isDevelopment = env.development;

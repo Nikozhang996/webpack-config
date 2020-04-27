@@ -8,12 +8,12 @@ module.exports = {
     library: "react",
     libraryTarget: "commonjs",
     filename: "dll.js", //打包后接收的名字
-    path: path.resolve(__dirname, "dll"), //打包后地址
+    path: path.resolve(__dirname, "../public"), //打包后地址
   },
   plugins: [
     new DllPlugin({
       name: "react",
-      path: path.resolve(__dirname, "dll/manifest.json"),
+      path: path.resolve(__dirname, "./dll/manifest.json"),
     }),
   ],
 };
