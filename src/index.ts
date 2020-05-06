@@ -1,8 +1,15 @@
 import "./style/scss.scss";
 
-import("./utils/calc").then((res) => {
-  console.log(res);
-});
+setTimeout(() => {
+  import(
+    /* webpackMode: "lazy" */
+    /* webpackChunkName: "my-chunk-name" */
+    "./utils/calc"
+  ).then(({ add }) => {
+    console.log(add(1, 1));
+  });
+}, 1000);
+
 // import React from "react";
 // import ReactDOM from "react-dom";
 

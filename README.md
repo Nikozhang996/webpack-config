@@ -76,7 +76,8 @@ https://segmentfault.com/a/1190000021952886
 ### DllReferencePlugin
 
 ### 动态加载
-
+#### 参考资料
+- [关于webpack依赖动态懒加载](https://www.jianshu.com/p/54015bf76047)
 ### SplitChunks
 
 ### SplitChunksPlugin
