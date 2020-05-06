@@ -79,6 +79,8 @@ https://segmentfault.com/a/1190000021952886
 
 ### SplitChunks
 
+### SplitChunksPlugin
+
 ### 打包文件分析工具
 
 > webpack-bundle-analyzer

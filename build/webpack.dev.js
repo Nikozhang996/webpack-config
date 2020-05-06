@@ -24,7 +24,7 @@ module.exports = {
     }),
     // 需要手动引入react.dll.js
     new AddAssetHtmlWebpackPlugin({
-      filepath: path.resolve(__dirname, "./dll/react.dll.js"),
+      filepath: path.resolve(__dirname, "../public/dll.js"),
     }),
   ],
 };
