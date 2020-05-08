@@ -1,11 +1,16 @@
 ## webpack 是什么
 
-> webpack 的官方定义是个模块打包机
+> webpack 的官方定义是个模块打包机，静态模块打包工具（编译成静态资源）。
 
 ## webpack 能做什么
 
-- 编译和压缩文件
-- 使用不同的 loader 处理对应的文件
+- 代码转换：ES6 或 TypeScript 编译成 JavaScript、SCSS 编译成 CSS 等。
+- 文件优化：压缩 JavaScript、CSS、HTML 代码，压缩合并图片等。
+- 代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载。
+- 模块合并：在采用模块化的项目里会有很多个模块和文件，需要构建功能把模块分类合并成一个文件。
+- 自动刷新：监听本地源代码的变化，自动重新构建、刷新浏览器。
+- 代码校验：在代码被提交到仓库前需要校验代码是否符合规范，以及单元测试是否通过。
+- 自动发布：更新完代码后，自动构建出线上发布代码并传输给发布系统。
 
 ## 常见 loader 和 plugin
 
@@ -149,6 +154,7 @@ https://segmentfault.com/a/1190000021952886
 - [从 0 搭建自己的 webpack 开发环境（一）](https://segmentfault.com/a/1190000020450206?utm_source=tag-newest)
 - [入门 Webpack，看这篇就够了](https://www.jianshu.com/p/42e11515c10f)
 - [使用@babel/preset-typescript 取代 awesome-typescript-loader 和 ts-loader](https://www.cnblogs.com/vvjiang/archive/2019/12/18/12057811.html)
+- [【webpack 学习随笔】1.webpack 基础以及核心配置](https://www.shifeng1993.com/2019/06/08/webpack_1/)
 - [【webpack 学习随笔】2.webpack 优化配置策略](https://www.shifeng1993.com/2019/06/09/webpack_2/)
 - [Webpack 学习笔记](https://www.jianshu.com/p/d550930afbec)
 - [「吐血整理」再来一打 Webpack 面试题](https://mp.weixin.qq.com/s/UdsP3u_LR64dzffNPCx-2g)
