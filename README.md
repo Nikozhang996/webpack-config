@@ -75,9 +75,16 @@ https://segmentfault.com/a/1190000021952886
 
 ### DllReferencePlugin
 
+> 将生成的 manifest.json 文件映射到 html 中
+
 ### 动态加载
+
+> 使用 import()语法
+
 #### 参考资料
-- [关于webpack依赖动态懒加载](https://www.jianshu.com/p/54015bf76047)
+
+- [关于 webpack 依赖动态懒加载](https://www.jianshu.com/p/54015bf76047)
+
 ### SplitChunks
 
 ### SplitChunksPlugin
@@ -138,9 +145,9 @@ https://segmentfault.com/a/1190000021952886
 
 ## 参考资料
 
-- [从 0 搭建自己的 webpack 开发环境（一）](https://segmentfault.com/a/1190000020450206?utm_source=tag-newest)
-- https://www.jianshu.com/p/42e11515c10f
 - https://gitee.com/zhufengpeixun/webpack-train
+- [从 0 搭建自己的 webpack 开发环境（一）](https://segmentfault.com/a/1190000020450206?utm_source=tag-newest)
+- [入门 Webpack，看这篇就够了](https://www.jianshu.com/p/42e11515c10f)
 - [使用@babel/preset-typescript 取代 awesome-typescript-loader 和 ts-loader](https://www.cnblogs.com/vvjiang/archive/2019/12/18/12057811.html)
 - [【webpack 学习随笔】2.webpack 优化配置策略](https://www.shifeng1993.com/2019/06/09/webpack_2/)
 - [Webpack 学习笔记](https://www.jianshu.com/p/d550930afbec)
