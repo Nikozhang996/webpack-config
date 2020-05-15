@@ -98,7 +98,13 @@ https://segmentfault.com/a/1190000021952886
 
 > webpack-bundle-analyzer
 
+### noParse
+
+> 不解释指定模块
+
 ### IgnorePlugin
+
+> 解析分包
 
 ### 费时分析
 
