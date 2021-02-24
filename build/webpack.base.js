@@ -5,7 +5,7 @@ const merge = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
+// const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const HappyPack = require("happypack");
 const os = require("os");
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
@@ -29,11 +29,11 @@ module.exports = function(env) {
     },
     module: {
       rules: [
-        {
+        /*{
           test: /\.vue$/,
           use: "vue-loader",
           exclude: /node_modules/,
-        },
+        },*/
         {
           // 解析js文件 默认会调用@babel/core
           test: /\.tsx?$/,
@@ -132,7 +132,7 @@ module.exports = function(env) {
     },
     plugins: [
       new CleanWebpackPlugin(),
-      new VueLoaderPlugin(),
+      // new VueLoaderPlugin(),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "../public/index.html"),
         title: "hello webpack",
