@@ -1,3 +1,5 @@
+/** @format */
+
 const path = require("path");
 const webpack = require("webpack");
 const DllReferencePlugin = require("webpack/lib/DllReferencePlugin");

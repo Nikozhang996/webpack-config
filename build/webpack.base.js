@@ -1,3 +1,5 @@
+/** @format */
+
 const DEVELOPMENT_CONFIG = require("./webpack.dev");
 const PROD_CONFIG = require("./webpack.prod");
 const path = require("path");
@@ -11,7 +13,7 @@ const os = require("os");
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
 // const AddAssetHtmlCdnPlugin = require("add-asset-html-cdn-webpack-plugin");
 
-module.exports = function(env) {
+module.exports = function (env) {
   const isDevelopment = env.development;
   const isProduction = env.production;
 
@@ -22,7 +24,7 @@ module.exports = function(env) {
       path: path.resolve(__dirname, "../dist"),
     },
     resolve: {
-      extensions: [".js", ".json", "ts"],
+      extensions: [".js", ".json", ".ts", ".tsx"],
     },
     externals: {
       jquery: "$",

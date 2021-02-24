@@ -1,3 +1,5 @@
+/** @format */
+
 // Type definitions for webpack (module API) 1.15
 // Project: https://github.com/webpack/webpack
 // Definitions by: use-strict <https://github.com/use-strict>

@@ -4,39 +4,22 @@
  */
 {
   "presets": [
-    [
-      "@babel/preset-env",
-      {
-        // 使用的api 会自动转化，并且是按需加载
-        "useBuiltIns": "usage",
-        // 使用core-js代替babel-polyfill
-        "corejs": 3
-      }
-    ],
+    ["@babel/preset-env",{
+      // 使用的api 会自动转化，并且是按需加载
+      "useBuiltIns":"usage",
+      // babel-polyfill
+      "corejs":3
+    }],
     "@babel/preset-react",
-    [
-      "@babel/preset-typescript",
-      {
-        "allExtensions": true
-      }
-    ]
+    ["@babel/preset-typescript",{
+      "allExtensions": true
+    }]
   ],
   "plugins": [
     // 解析装饰器
-    [
-      "@babel/plugin-proposal-decorators",
-      {
-        "legacy": true
-      }
-    ],
+    ["@babel/plugin-proposal-decorators",{"legacy":true}],
     // 解析类的属性
-    [
-      "@babel/plugin-proposal-class-properties",
-      {
-        "loose": true
-      }
-    ],
-    // 使用transform-runtime A plugin that enables the re-use of Babel's injected helper code to save on codesize.可以帮我们节省代码
+    ["@babel/plugin-proposal-class-properties",{"loose":true}],
     "@babel/plugin-transform-runtime"
   ]
 }

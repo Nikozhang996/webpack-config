@@ -1,3 +1,5 @@
+/** @format */
+
 const path = require("path");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
@@ -7,7 +9,7 @@ const PurgecssPlugin = require("purgecss-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 
-module.exports = function(env) {
+module.exports = function (env) {
   return {
     mode: "production",
     plugins: [
